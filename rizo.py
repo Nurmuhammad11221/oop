@@ -22,22 +22,33 @@
 # print(inson.get_familya())
 # print(inson.get_passport())
 
- # 2
+ # 2        
+
+
 class Shaxs:
-    def __init__(self, ism, familya, passport, t_yil):
+    def __init__(self, ism, familya, passport, t_yil, IDraqam):
         self.ism = ism
         self.familya = familya
         self.t_yil = t_yil
         self.passport = passport
+        self.IDraqam = IDraqam
+
     def get_info(self):
         info = f"{self.ism} {self.familya}\n"
-        info += f"{self.passport}, {self.t_yil}-yilda tugilgan"
+        info += f"{self.passport}, {self.t_yil}-yilda tugilgan, {self.IDraqam}"
         return info
+
     def get_age(self, yil):
         age = yil - self.t_yil
         return age
-    
-    
-inson = Shaxs("Teshmat", "Boltavoyev", "AC1003243", 2000)
+
+inson = Shaxs("Teshmat", "Boltavoyev", "AC1003243", 2000, "5298822")
 print(inson.get_info())
 print(f"{inson.get_age(2024)} yoshida")
+print(inson.IDraqam)
+
+
+class Talaba(Shaxs):
+    """ Talaba klasi """
+    def __init__(self, ism, familya, passport, t_yil, IDraqam):
+        
