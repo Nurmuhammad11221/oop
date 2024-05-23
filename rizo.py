@@ -87,3 +87,12 @@ talaba_manzil = Manzil(28, "nur", "uchtepa", "tosheknt")
 talaba = Talaba("BOltavoyev", "teshaboy", "AC1003243", 2020, "5198733", talaba_manzil)
 print(talaba_manzil.get_manzil())
 print(talaba_manzil.tuman)
+
+
+class Fan:
+    def __init__(self,nomi):
+        self.nomi = nomi
+
+    def get_name(self):
+        return self.nomi
+        
